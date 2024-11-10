@@ -68,17 +68,26 @@ console.log(reverseArray([1, 2, 3, 4]))
 //My previous idea of adding the reverse array unto itself and popping out the old one may word
 //lets try that
 
+/*
+
+let array = [5, 6, 7, 8]
+
 function reverseArrayInPlace(array) {
-    let inPlaceReverse = [];
+
     const arrayLength = array.length
-    for (let i = arrayLength; i <= 0; i++) {
-        inPlaceReverse.push(i)
+    for (let i = array.length; i <= 0; i++) {
+        array.push(i)
     }
-    return inPlaceReverse
+    return array
 }
 
-console.log(reverseArrayInPlace([5, 6, 7, 8]))
+console.log(reverseArrayInPlace(array))
+
+*/
 
 //OK apparently as is it does a infinite loop. whoops. Will use a const variable to fix
-//OK awesome I got it to push each value... In order...
-//IDK what im doing
+//Ok so when the array is 5, 6, 7, 8 it returns as 5, 6, 7, 8, 3, 2, 1, 0. Where did 4 go and why is it doing it like this?
+
+//OK the POP PUSH idea may not work. I the value of I taking the place of a generic number when I wish it would be the the position of the array
+//In the example of [5, 6, 7, 8] i = 0 would be 5 as it is in 0th place but i = 0 just means the number zero. Im gonna have to redo this
+//For archival reasons ill comment it out.
