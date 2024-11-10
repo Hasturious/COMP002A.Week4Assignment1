@@ -13,7 +13,10 @@ function numberRange(start, end) {
 
 console.log(numberRange(1, 10))
 
-//Theres a weird (end) at the start of the log. IDK what its doing but the code is doing what was asked.
+//Theres a weird (end) at the start of the log. IDK what its doing but the code is doing what was asked. I guess its some VS code thing
+//like when you have recursion the console will have an ever increasing number to the left of the output the (number) on the left tells the 
+//string size
+//Otherwise this code is pretty simple. we add too an array for every number 
 
 // 2. Next, write a sum function that takes an array of numbers and returns the sum of
 // these numbers. Run the example program and see whether it does indeed return 55.
@@ -91,3 +94,6 @@ console.log(reverseArrayInPlace(array))
 //OK the POP PUSH idea may not work. I the value of I taking the place of a generic number when I wish it would be the the position of the array
 //In the example of [5, 6, 7, 8] i = 0 would be 5 as it is in 0th place but i = 0 just means the number zero. Im gonna have to redo this
 //For archival reasons ill comment it out.
+//I suppose this might work if my is a set of numbers that includes zero and doesn't skip but thats obviously not the point of the assignment
+
+//2nd approach 
