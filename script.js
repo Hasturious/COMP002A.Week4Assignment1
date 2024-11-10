@@ -11,7 +11,7 @@ function numberRange(start, end) {
     return range
 }
 
-console.log(numberRange(1, 20))
+console.log(numberRange(1, 10))
 
 //Theres a weird (end) at the start of the log. IDK what its doing but the code is doing what was asked.
 
@@ -19,6 +19,18 @@ console.log(numberRange(1, 20))
 // these numbers. Run the example program and see whether it does indeed return 55.
 // Example output:
 // console.log(sum(range(1, 10))); // returns 55
+
+function rangeSum(numbers) {
+    return numbers.reduce((accumulator, current) => accumulator + current, 0);
+  }
+  
+
+  let result = rangeSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  console.log(result); // Output: 55
+
+//The reduce, accumulator, and current methods
+//Reduce "reduces" arrays into a single value
+
 
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and
