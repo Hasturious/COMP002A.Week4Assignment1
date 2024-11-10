@@ -3,6 +3,18 @@
 // Example output:
 // console.log(range(1, 10)); // outputs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+function numberRange(start, end) {
+    let range = [];
+    for (let i = start; i <= end; i++) {
+        range.push(i);
+    }
+    return range
+}
+
+console.log(numberRange(1, 20))
+
+//Theres a weird (end) at the start of the log. IDK what its doing but the code is doing what was asked.
+
 // 2. Next, write a sum function that takes an array of numbers and returns the sum of
 // these numbers. Run the example program and see whether it does indeed return 55.
 // Example output:
