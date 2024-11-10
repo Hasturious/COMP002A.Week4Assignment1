@@ -24,12 +24,14 @@ function rangeSum(numbers) {
     return numbers.reduce((accumulator, current) => accumulator + current, 0);
   }
   
-
   let result = rangeSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-  console.log(result); // Output: 55
+  console.log(result);
 
 //The reduce, accumulator, and current methods
-//Reduce "reduces" arrays into a single value
+//Reduce "reduces" arrays into a single value. for some reason this just doesn't work by itself
+//accumulator holds the result of each addition, like a snowball down the hill it grows as we add to it
+//current is the snow itself, ready to be picked up off the hill and accumulated
+//In this metaphor I suppose reduce is gravity?
 
 
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
