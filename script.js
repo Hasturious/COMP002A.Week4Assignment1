@@ -63,3 +63,22 @@ function reverseArray(array) {
 }
 
 console.log(reverseArray([1, 2, 3, 4]))
+
+//OK this time we can't just create a new array but must modify the current array
+//My previous idea of adding the reverse array unto itself and popping out the old one may word
+//lets try that
+
+function reverseArrayInPlace(array) {
+    let inPlaceReverse = [];
+    const arrayLength = array.length
+    for (let i = arrayLength; i <= 0; i++) {
+        inPlaceReverse.push(i)
+    }
+    return inPlaceReverse
+}
+
+console.log(reverseArrayInPlace([5, 6, 7, 8]))
+
+//OK apparently as is it does a infinite loop. whoops. Will use a const variable to fix
+//OK awesome I got it to push each value... In order...
+//IDK what im doing
