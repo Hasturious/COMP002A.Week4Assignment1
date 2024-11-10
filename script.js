@@ -47,3 +47,19 @@ function rangeSum(numbers) {
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+
+//IDEAS
+//If we ADD the array onto itself in reverse then pop all the bits of the original array that could work
+//or we can do an for loop that logs backwards? like maybe it can take the nth value of an array so in the case of
+//[1, 2, 3, 4, 5] the for loop cam look like for(let i = stringLength - 1; i >= 0; i--) {}
+//that way we can get an brand new "reverse" array
+
+function reverseArray(array) {
+    let arrayMirror = [];
+    for (let i = array.length - 1; i >= 0; i--){
+        arrayMirror.push(array[i]);
+    }
+    return arrayMirror
+}
+
+console.log(reverseArray([1, 2, 3, 4]))
