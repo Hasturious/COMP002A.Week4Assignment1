@@ -96,4 +96,36 @@ console.log(reverseArrayInPlace(array))
 //For archival reasons ill comment it out.
 //I suppose this might work if my is a set of numbers that includes zero and doesn't skip but thats obviously not the point of the assignment
 
-//2nd approach 
+//2nd attempt
+
+function reverseArrayInPlace(array) {
+
+    for (let i = 0; i < Math.floor(array.length / 2); i++) {
+      const temp = array[i];
+      array[i] = array[array.length - 1 - i];
+      array[array.length - 1 - i] = temp;
+
+    }
+
+    return array;
+
+  }
+  
+  const array = [5, 6, 7, 8];
+  reverseArrayInPlace(array);
+  console.log(array);
+
+  //OK this a big departure from my last attempt but I found some very useful documentation and some trial and error
+  //Lets break it down. the Math.floor is by far the more complicated bit.
+  //Math.floor() always rounds down and returns an integer. the / 2 ensures the code runs at less than half the array
+  //this is important because as we swap "start" elements with "end" elements by staying in the start half we don't 
+  //accidentally swap up the latter half. ALSO because we are potentially working with an odd number
+  //of elements in the arrays rounding up from a floating point will let us have a clearer "half way mark"
+  //temp holds the index of I which is being swapped with the different values in the original array
+  //each time the for loop runs it swaps the the pushes the first most element to the end
+  //to do this we put the temp I will take the current I position
+  //then the I position will be swapped to another place.
+  // If I is 0 in a 4 length array then array[i] which is currently array[0] will become array[0] (see line 105)
+  //Now we do it in reverse. we take the former end piece and put it on the back
+  //line 106 takes the temp value and places it mirrored from the end
+  //This works the same has 105 but the process is reversed i have a headache
